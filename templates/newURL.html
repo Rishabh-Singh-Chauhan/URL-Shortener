@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}URL Shortener{% endblock %}
+
+{% block content %}
+<div>
+    <label for="newURL">Your Shortened URL is: </label>
+    <a href="http://127.0.0.1:5000/{{short_url_display}}" target="_blank">http://127.0.0.1:5000/{{short_url_display}}</a>
+
+    <br><br>
+
+    <label for="company">URL Belongs to:</label>
+    <label>{{company}}</label>
+
+    <br><br>
+
+    <label for="comp_type">Industry of the {{company}}:</label>
+    <label>{{type}}</label>
+
+    <br><br>
+
+    <label for="prediction">You are {{pred_prob}}% likely to visit this Website</label>
+</div>
+
+<a href="http://127.0.0.1:5000">BACK TO HOME</a>
+{% endblock %}
